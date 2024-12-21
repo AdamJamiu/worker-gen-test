@@ -123,11 +123,19 @@ const LeadsTable = () => {
           <tbody>
             {filteredData.length > 0 ? (
               filteredData
-                .sort((a, b) =>
-                  sortName !== ""
-                    ? a[sortName]?.localeCompare(b[sortName] || "")
-                    : 0
-                )
+                .sort((a, b) => {
+                  if (sortName !== ESortName.Default) {
+                    const valueA = a[sortName as keyof typeof a];
+                    const valueB = b[sortName as keyof typeof b];
+
+                    // Ensure both values are strings for localeCompare
+                    const strA = valueA != null ? String(valueA) : "";
+                    const strB = valueB != null ? String(valueB) : "";
+
+                    return strA.localeCompare(strB);
+                  }
+                  return 0;
+                })
                 ?.map((item, index) => (
                   <tr
                     onClick={() =>

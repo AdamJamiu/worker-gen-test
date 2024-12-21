@@ -2,7 +2,7 @@ export const leads_table = [
   {
     id: 12,
     Name: "Alice Johnson",
-    Topic: "Topic 1",
+    Topic: "Cafe A100 for commercial use",
     Status: "Pending",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -10,7 +10,7 @@ export const leads_table = [
   {
     id: 1,
     Name: "Michael Smith",
-    Topic: "Topic 2",
+    Topic: "Upgrading service plan",
     Status: "Completed",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -18,7 +18,7 @@ export const leads_table = [
   {
     id: 2,
     Name: "Emma Brown",
-    Topic: "Topic 3",
+    Topic: "issue with throughout on EspressorMaster",
     Status: "Pending",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -26,7 +26,7 @@ export const leads_table = [
   {
     id: 3,
     Name: "Liam Wilson",
-    Topic: "Topic 4",
+    Topic: "New roaster in distirbution facility",
     Status: "Completed",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -34,7 +34,7 @@ export const leads_table = [
   {
     id: 4,
     Name: "Olivia Martinez",
-    Topic: "Topic 5",
+    Topic: "issue with throughout on EspressorMaster",
     Status: "Pending",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -42,7 +42,7 @@ export const leads_table = [
   {
     id: 5,
     Name: "Noah Davis",
-    Topic: "Topic 6",
+    Topic: "issue with throughout on EspressorMaster",
     Status: "Completed",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -50,7 +50,7 @@ export const leads_table = [
   {
     id: 6,
     Name: "Sophia Garcia",
-    Topic: "Topic 7",
+    Topic: "Concern on current machines",
     Status: "Pending",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -58,7 +58,7 @@ export const leads_table = [
   {
     id: 7,
     Name: "James Anderson",
-    Topic: "Topic 8",
+    Topic: "Addressing service concerns",
     Status: "Completed",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -66,7 +66,7 @@ export const leads_table = [
   {
     id: 8,
     Name: "Isabella Thomas",
-    Topic: "Topic 9",
+    Topic: "Premium coffee beans",
     Status: "Pending",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -74,7 +74,7 @@ export const leads_table = [
   {
     id: 9,
     Name: "Benjamin Taylor",
-    Topic: "Topic 10",
+    Topic: "Cafe A100 bulk rate",
     Status: "Completed",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -82,7 +82,7 @@ export const leads_table = [
   {
     id: 10,
     Name: "Mia Moore",
-    Topic: "Topic 11",
+    Topic: "Concern on current machines",
     Status: "Pending",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
@@ -90,7 +90,7 @@ export const leads_table = [
   {
     id: 11,
     Name: "Ethan Jackson",
-    Topic: "Topic 12",
+    Topic: "Improving cost per cup",
     Status: "Completed",
     Reason: "New",
     CreatedOn: "2/04/2024 12:00 PM",
