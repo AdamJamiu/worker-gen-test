@@ -31,6 +31,8 @@ const LeadsTable = () => {
           : item
       );
       setFilteredData(data);
+    } else {
+      setFilteredData(leads_table);
     }
   }, [searchTerm]);
 

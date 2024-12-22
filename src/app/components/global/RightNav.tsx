@@ -5,7 +5,7 @@ import { LuMessageSquare } from "react-icons/lu";
 
 const RightNav = () => {
   return (
-    <aside className="absolute top-0 right-0 bottom-0 bg-[#EFEFEF] p-3 pt-7 hidden lg:flex flex-col gap-5 text-gray-700">
+    <aside className="fixed top-0 right-0 bottom-0 bg-[#EFEFEF] p-3 pt-7 hidden lg:flex flex-col gap-5 text-gray-700 z-30">
       <button>
         <RiWechatChannelsFill />
       </button>

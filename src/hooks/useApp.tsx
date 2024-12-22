@@ -1,4 +1,5 @@
-import { AppContext, IAppProvider } from "@/app/components/Provider";
+import { AppContext } from "@/app/components/Provider";
+import { IAppProvider } from "@/types/nav.types";
 import { useContext } from "react";
 
 const useApp = (): IAppProvider => {

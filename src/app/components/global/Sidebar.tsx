@@ -2,42 +2,37 @@
 
 import { sidebar } from "@/data/sidebar";
 import useApp from "@/hooks/useApp";
-import useScreenWidth from "@/hooks/useScreenWidth";
+// import useScreenWidth from "@/hooks/useScreenWidth";
 import { useEffect, useRef } from "react";
 import { CgChevronDown } from "react-icons/cg";
+import { LiaMagento } from "react-icons/lia";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Sidebar = () => {
-  const { isSidebar, setIsSidebar } = useApp();
+  const { isSidebar, setIsSidebar, setIsAgentSkillsOpen } = useApp();
   const sidebarRef = useRef<HTMLDivElement | null>(null);
-  const screenWidth = useScreenWidth();
+  // const screenWidth = useScreenWidth();
+  // console.log(screenWidth, "screenWidth");
 
-  const handleClickOutside = (e: any) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
-      if (screenWidth < 768) {
-        setIsSidebar(false);
-      }
-    }
-  };
+  // const handleClickOutside = (e: any) => {
+  //   if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+  //     setIsSidebar(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClickOutside);
 
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, []);
 
   return (
     <>
       <div
-        className={`${
-          !isSidebar ? "hidden -z-[999]" : "md:hidden block z-[90]"
-        } absolute inset-0 bg-black opacity-20 z-0 font-segoe`}
-      ></div>
-      <aside
         ref={sidebarRef}
         className={`${
           isSidebar ? "translate-x-0" : "-translate-x-[1000px]"
-        } ease-linear duration-200 transition-all md:fixed absolute left-0 top-0 bottom-0 bg-[#EFEFEF] w-[74vw] sm:w-[50vw] md:w-[210px] border-r-2 border-gray-300 overflow-y-auto z-[999] sidebar-scroll`}
+        } ease-linear duration-200 transition-all fixed left-0 top-0 h-screen bg-[#EFEFEF] w-[74vw] sm:w-[50vw] md:w-[210px] border-r-2 border-gray-300 overflow-y-auto z-[999] sidebar-scroll`}
       >
         <div className="p-2" onClick={() => setIsSidebar((prev) => !prev)}>
           <RxHamburgerMenu className="ml-1" />
@@ -57,6 +52,16 @@ const Sidebar = () => {
               {item.withArrow ? <CgChevronDown size={18} color="#888" /> : null}
             </button>
           ))}
+
+          <button
+            onClick={() => setIsAgentSkillsOpen(true)}
+            className="w-full py-1.5 pr-3 pl-4 flex justify-between hover:bg-white ease transition-all text-xs md:text-sm  font-medium text-gray-600"
+          >
+            <div className="flex justify-start items-center gap-3">
+              <LiaMagento />
+              <p>Agent Skills</p>
+            </div>
+          </button>
         </div>
 
         <div className="mb-4 w-full">
@@ -148,7 +153,13 @@ const Sidebar = () => {
             </button>
           ))}
         </div>
-      </aside>
+      </div>
+
+      <div
+        className={`${
+          !isSidebar ? "hidden -z-[999]" : "md:hidden block z-[90]"
+        } fixed inset-0 bg-black opacity-20 z-0 font-segoe`}
+      ></div>
     </>
   );
 };

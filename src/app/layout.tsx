@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
+import EngageDetails from "./components/modals/EngageDetails.modal";
 import Sidebar from "./components/global/Sidebar";
 import RightNav from "./components/global/RightNav";
-import "./globals.css";
 import AppProvider from "./components/Provider";
+import AgentSkills from "./components/modals/AgentSkills.modal";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Worker gen test",
@@ -20,7 +28,9 @@ export default function RootLayout({
         <AppProvider>
           <Sidebar />
           <RightNav />
-          <main>{children}</main>
+          <main className="h-full overflow-hidden">{children}</main>
+          <EngageDetails />
+          <AgentSkills />
         </AppProvider>
         {/* <Footer /> */}
       </body>
