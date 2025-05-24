@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay_Complete/ClashDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Medium.woff") format("woff"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash-Display-Medium";
+  src: url("/fonts/ClashDisplay_Complete/ClashDisplay-Medium.woff2") format("woff2"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Medium.woff") format("woff"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash-Display-Semibold";
+  src: url("/fonts/ClashDisplay_Complete/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Semibold.woff") format("woff"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash-Display-Bold";
+  src: url("/fonts/ClashDisplay_Complete/ClashDisplay-Bold.woff2") format("woff2"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Bold.woff") format("woff"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash-Display-Black";
+  src: url("/fonts/ClashDisplay_Complete/ClashDisplay-") format("woff2"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Bold.woff") format("woff"),
+    url("/fonts/ClashDisplay_Complete/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "gilroy";
+  src: url("../app/assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+.gilroy {
+  font-family: "gilroy" !important;
+}
+
+.clash-display {
+  font-family: "Clash Display" !important;
+}
+
+.clash-display-medium {
+  font-family: "Clash-Display-Medium" !important;
+}
+
+.clash-display-semibold {
+  font-family: "Clash-Display-Semibold" !important;
+}
+
+.clash-display-bold {
+  font-family: "Clash-Display-Bold" !important;
+}
+
+/* app/globals.css */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  /* Light grey */
+  border-top: 8px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+html {
+  scroll-padding-top: 100px;
+  /* Adjust this value to match the height of your navbar */
+}
+
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+  width: 6px;
+}
+
+/* Handle on hover */
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #55A132;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Animation */
+.animate-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animate-out {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+
+/* Status card  */
+.pending {
+  background: #fed7aa;
+  /* background: #FBD38D; */
+  border-radius: 50px;
+  width: fit-content;
+  padding: .7em 1em;
+  color: #c2410c;
+  font-size: 12px;
+}
+
+.Active {
+  border-radius: 500px;
+  border: 1.5px solid #059348;
+  width: fit-content;
+  padding: 4px .7em;
+  background: #0F6D2F2E;
+  color: #059348;
+  font-size: 12px;
+}
+
+.Inactive {
+  background: white;
+  border-radius: 400px;
+  border: 1px solid #8A8A8A;
+  width: fit-content;
+  padding: 4px .7em;
+  color: #8A8A8A;
+  font-size: 14px;
+}
+
+.status-Expired {
+  background: red;
+  border-radius: 10px;
+  width: fit-content;
+  padding: .5em;
+  color: white;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.status-Rejected {
+  background: rgb(245, 186, 186);
+  border-radius: 10px;
+  width: fit-content;
+  padding: .5em;
+  color: red;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.Faulty {
+  background: rgba(251, 55, 72, 0.10);
+  border-radius: 100px;
+  border: 1px solid #D00416;
+  width: fit-content;
+  padding: 5px .9em;
+  color: #D00416;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.status-Approved {
+  background: #0F6D2F2E;
+  width: fit-content;
+  padding: .5em;
+  color: green;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.status-Confirmed {
+  background: #0F6D2F2E;
+  width: fit-content;
+  padding: .5em;
+  color: green;
+  font-size: 14px;
+  text-transform: lowercase;
+}
