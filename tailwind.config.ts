@@ -48,6 +48,7 @@ export default {
         primary600: "#55A132",
         secondary: "#4D76CE",
         secondary200: "#DBE4F5",
+        green200: "#059348",
         error100: "#FBE8E8",
         error200: "#D00416",
         error900: "#DD0000",

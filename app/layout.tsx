@@ -11,7 +11,6 @@ import AOSInitializer from "./components/AOSInitializer"; // Import the AOS init
 import Preloader from "./components/Preloader";
 import { ToastContainer } from "react-toastify";
 import ReactQueryProvider from "./components/provider/ReactQueryProvider";
-import logo from "./assets/images/fleetpro-logo.png";
 import "aos/dist/aos.css"; // Import AOS CSS
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";

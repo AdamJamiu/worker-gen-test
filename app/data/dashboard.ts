@@ -1,3 +1,13 @@
+import { PlanType } from "../dashboard/_components/SubRevenueChart";
+
+type RevenueData = {
+  name: string;
+  uv: number;
+  pv?: number;
+  amt?: number;
+  plan: PlanType;
+};
+
 export const trends = [
   {
     name: "Plastics",
@@ -127,78 +137,90 @@ export const activity = [
   },
 ];
 
-export const waste_recycled = [
+export const sub_revenue: RevenueData[] = [
   {
     name: "Jan",
     uv: 4000,
     pv: 2400,
     amt: 2400,
+    plan: "monthly",
   },
   {
     name: "Feb",
     uv: 3000,
     pv: 1398,
     amt: 2210,
+    plan: "quarterly",
   },
   {
     name: "Mar",
     uv: 2000,
     pv: 9800,
     amt: 2290,
+    plan: "yearly",
   },
   {
     name: "Apr",
     uv: 2780,
     pv: 3908,
     amt: 2000,
+    plan: "halfyear",
   },
   {
     name: "May",
     uv: 1890,
     pv: 4800,
     amt: 2181,
+    plan: "monthly",
   },
   {
     name: "Jun",
     uv: 2390,
     pv: 3800,
     amt: 2500,
+    plan: "monthly",
   },
   {
     name: "Jul",
     uv: 3490,
     pv: 4300,
     amt: 2100,
+    plan: "halfyear",
   },
   {
     name: "Aug",
     uv: 3490,
     pv: 4300,
     amt: 2100,
+    plan: "monthly",
   },
   {
     name: "Sep",
     uv: 3490,
     pv: 4300,
     amt: 2100,
+    plan: "monthly",
   },
   {
     name: "Oct",
     uv: 3490,
     pv: 4300,
     amt: 2100,
+    plan: "yearly",
   },
   {
     name: "Nov",
     uv: 3490,
     pv: 4300,
     amt: 2100,
+    plan: "halfyear",
   },
   {
     name: "Dec",
     uv: 3490,
     pv: 4300,
     amt: 2100,
+    plan: "halfyear",
   },
 ];
 

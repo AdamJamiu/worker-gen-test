@@ -1,6 +1,5 @@
 "use client";
 
-import { waste_recycled } from "@/app/data/dashboard";
 import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
 
 const WasteRecycleChart = () => {
@@ -14,24 +13,7 @@ const WasteRecycleChart = () => {
           3500kg
         </h2>
 
-        <div className="w-full mt-7 font-clash_display text-neutrals500">
-          <BarChart
-            width={850}
-            className="text-sm"
-            height={280}
-            data={waste_recycled}
-          >
-            <Bar
-              dataKey="uv"
-              fill="#DFF0D7"
-              className="hover:fill-primary ease transition-all duration-300"
-            />
-            <CartesianGrid strokeDasharray="2 2" />
-            <XAxis dataKey="name" />
-            <YAxis tickFormatter={(value) => `${value}Kg`} />
-            <Tooltip contentStyle={{ color: "#5EB237" }} />
-          </BarChart>
-        </div>
+        <div className="w-full mt-7 font-clash_display text-neutrals500"></div>
       </div>
     </section>
   );

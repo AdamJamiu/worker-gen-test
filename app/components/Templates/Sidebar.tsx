@@ -4,11 +4,9 @@ import { sidebarItems } from "@/app/data/sidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-// import { FaChevronDown } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 import { IoSettingsOutline } from "react-icons/io5";
 import useApp from "@/app/hooks/useApp";
-// import white_user from "../../assets/images/white-user.svg";
 import logo from "../../assets/images/logo.png";
 import Image from "next/image";
 import { BiUser } from "react-icons/bi";
@@ -37,7 +35,7 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <aside className="fixed left-0 top-0 bottom-0 bg-white  border-r border-neutrals400 pb-10 pt-6 w-[250px] z-20 xl:block hidden h-screen">
+    <aside className="fixed left-0 top-0 bottom-0 bg-white  border-r border-neutrals400 pb-10 pt-6 w-[220px] z-20 xl:block hidden h-screen">
       <div className="w-full">
         <div className="px-4">
           <Image
@@ -179,12 +177,12 @@ export const SidebarItem = ({ item, index }: ISidebarItem) => {
         onClick={() => handleToggle(index)}
         href={item.href}
         className={`${
-          pathname.includes(item.name) ? " bg-primary100" : ""
+          pathname === item.name ? " bg-primary100" : ""
         } flex items-center font-medium justify-between gap-3 w-full text-neutrals700 hover:bg-primary100 ease transition-all px-2 py-3 rounded-md`}
       >
         <div className="flex justify-start items-center gap-3">
           <item.icon size={24} />
-          <p className="font-medium font-bricolage">{item.label}</p>
+          <p className="font-medium font-bricolage text-sm">{item.label}</p>
         </div>
       </Link>
     </div>

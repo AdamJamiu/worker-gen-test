@@ -16,6 +16,7 @@ import { useQuery } from "@tanstack/react-query";
 import { adminCaller } from "@/app/interceptors";
 import LoadingSkeleton from "@/app/components/ui/LoadingSkeleton";
 import { useRouter } from "next/navigation";
+import { drivers } from "@/app/data/dashboard";
 
 interface ITable {
   onOpenModal: () => void;
@@ -45,7 +46,6 @@ const Table = ({ onOpenModal }: ITable) => {
   const itemsPerPage = 8;
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState<number>(1);
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMenuId, setOpenMenuId] = useState<number | null>(null);
   const navigate = useRouter();
 
@@ -62,7 +62,7 @@ const Table = ({ onOpenModal }: ITable) => {
   >([]);
   const totalPages = Math.ceil(individual_customers?.length / itemsPerPage);
 
-  console.log("data", individual_customers);
+  // console.log("data", individual_customers);
 
   const handleNextPage = () => {
     if (page < totalPages) {
@@ -188,29 +188,29 @@ const Table = ({ onOpenModal }: ITable) => {
               </tr>
             </thead>
             <tbody>
-              {filteredUsers?.map((item, index) => (
+              {drivers?.map((item, index) => (
                 <tr
                   key={index}
                   className="w-full border-b border-neutrals100 font-clash_display_medium text-neutrals500 text-xs md:text-sm ease transition-all duration-300 hover:bg-gray-100"
                 >
                   <td className="px-2 py-4">
                     <div className="flex justify-start items-center gap-2 flex-nowrap">
-                      {item?.imageUrl ? (
+                      {/* {item?.imageUrl ? (
                         <img
                           src={item?.imageUrl}
                           alt={item?.fullName}
                           className="rounded-full"
                         />
-                      ) : null}
+                      ) : null} */}
                       <div>
-                        <p>{item?.fullName}</p>
+                        <p>{item?.name}</p>
                         <p className="font-clash_display">{item.email}</p>
                       </div>
                     </div>
                   </td>
-                  <td className="px-2 py-4">{item?.userType || "N/A"}</td>
-                  <td className="px-2 py-4">{item.phoneNumber || "N/A"}</td>
-                  <td className="px-2 py-4">{item?.address || "N/A"}</td>
+                  <td className="px-2 py-4">{item?.type || "N/A"}</td>
+                  <td className="px-2 py-4">{"N/A"}</td>
+                  <td className="px-2 py-4">{"N/A"}</td>
 
                   <td className="py-2 px-4">
                     <Menu

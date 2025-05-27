@@ -32,7 +32,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed left-0 xl:left-[250px] right-0 top-0 z-50 bg-white py-1">
+    <nav className="fixed left-0 xl:left-[220px] right-0 top-0 z-50 bg-white py-1">
       <div className="flex justify-between items-center px-6 py-3 md:py-5 md:px-8 lg:px-8">
         <h1 className="text-neutrals900 font-bricolage text-lg md:text-xl font-semibold">
           Dashboard
