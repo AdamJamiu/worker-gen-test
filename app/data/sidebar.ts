@@ -1,21 +1,16 @@
 import { FaRegBuilding, FaRegCircleUser } from "react-icons/fa6";
-import { IoPeopleOutline } from "react-icons/io5";
-import { FiBox, FiUsers } from "react-icons/fi";
-import { RiDashboardFill, RiUserCommunityLine } from "react-icons/ri";
-import { HiOutlineTruck } from "react-icons/hi";
-import { LuLayoutDashboard, LuNotepadText } from "react-icons/lu";
-import { RiHome7Line, RiHome7Fill } from "react-icons/ri";
-import { CiMoneyBill } from "react-icons/ci";
+import { RiDashboardFill } from "react-icons/ri";
+import { LuLayoutDashboard } from "react-icons/lu";
 import { TbCashBanknote, TbNotes } from "react-icons/tb";
 import { GoNote } from "react-icons/go";
 
 export const sidebarItems = [
   {
-    href: "/dashboard/",
+    href: "/dashboard",
     label: "Dashboard",
     icon: LuLayoutDashboard,
     active_icon: RiDashboardFill,
-    name: "/dashboard/",
+    name: "/dashboard",
   },
   {
     href: "/dashboard/user-management",

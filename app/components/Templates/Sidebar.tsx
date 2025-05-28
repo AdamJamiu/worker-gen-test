@@ -77,7 +77,7 @@ const Sidebar = () => {
               <SidebarItem
                 index={sidebarItems.length - 1 + 1}
                 item={{
-                  href: "/settings",
+                  href: "/dashboard/settings",
                   icon: IoSettingsOutline,
                   label: "Profile Settings",
                   name: "settings",
@@ -121,7 +121,7 @@ export const MobileSidebar = () => {
           isSidebarOpen
             ? "z-[9999]"
             : "-translate-x-[10000px] opacity-0 -z-[999]"
-        } ease transition-all duration-300 fixed left-0 top-0 bottom-0 bg-primary py-10 px-4 w-[300px] sm:w-[250px]`}
+        } ease transition-all duration-300 fixed left-0 top-0 bottom-0 bg-white py-10 px-4 w-[300px] sm:w-[250px]`}
       >
         <div className="w-full">
           <img src={logo as any} alt="fleetpro logo" className="mx-auto mb-7" />
@@ -130,13 +130,13 @@ export const MobileSidebar = () => {
             {sidebarItems.map((item, index) => (
               <SidebarItem index={index} item={item} key={index} />
             ))}
-            <div className="mt-5">
+            <div className="mt-5 w-full">
               <SidebarItem
                 index={sidebarItems.length - 1 + 1}
                 item={{
-                  href: "/settings",
+                  href: "/dashboard/settings",
                   icon: CiSettings,
-                  label: "Porfile Settings",
+                  label: "Profile Settings",
                   name: "settings",
                 }}
               />
@@ -171,13 +171,15 @@ export const SidebarItem = ({ item, index }: ISidebarItem) => {
     }
   }, [activeIndex]);
 
+  console.log("pathname", pathname);
+
   return (
     <div key={item.href} className="relative w-full min-h-max font-bricolage">
       <Link
         onClick={() => handleToggle(index)}
         href={item.href}
         className={`${
-          pathname === item.name ? " bg-primary100" : ""
+          pathname === item.href ? " bg-primary100" : ""
         } flex items-center font-medium justify-between gap-3 w-full text-neutrals700 hover:bg-primary100 ease transition-all px-2 py-3 rounded-md`}
       >
         <div className="flex justify-start items-center gap-3">
